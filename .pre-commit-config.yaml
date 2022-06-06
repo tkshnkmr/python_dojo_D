@@ -9,7 +9,7 @@ repos:
     name: check-added-large-files
     args: ['--maxkb=1000']
     stages: [commit]
-    exclude: tests/streetview/known_results.pickle
+    exclude:
 
 - repo: local
   hooks:
@@ -17,38 +17,36 @@ repos:
     name: isort
     stages: [commit]
     language: system
-    entry: poetry run isort
+    entry: isort
     types: [python]
 
   - id: black
     name: black
     stages: [commit]
     language: system
-    entry: poetry run black
+    entry: black
     types: [python]
 
   - id: flake8
     name: flake8
     stages: [commit]
     language: system
-    entry: poetry run flake8
-    exclude: (^research/*|^tests/streetview/requests/*)
+    entry: flake8
     types: [python]
 
   - id: mypy
     name: mypy
     stages: [commit]
     language: system
-    entry: poetry run mypy
+    entry: mypy
     types: [python]
-    exclude: (^research/*|^tests/streetview/requests/*)
+    exclude:
     pass_filenames: true
 
   - id: pylint
     name: pylint
     stages: [commit]
     language: system
-    exclude: (^research/*|^tests/streetview/requests/*)
-    entry: poetry run pylint
+    entry: pylint
     types: [python]
     pass_filenames: true
