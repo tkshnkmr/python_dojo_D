@@ -1,8 +1,7 @@
 import os, sys, requests
 
-
 x=1
-name = 'name'
+name='name'
 
 def my_method(x, y):
    # No doc string
