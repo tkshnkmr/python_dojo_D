@@ -30,7 +30,6 @@ repos:
     language: system
     entry: mypy
     types: [python]
-    exclude:
     pass_filenames: true
 
   - id: pylint

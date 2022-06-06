@@ -10,3 +10,4 @@ def my_method(x, y):
 
 
 
+y=2
