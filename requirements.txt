@@ -1,0 +1,7 @@
+###### Requirements without Version Specifiers ######
+isort
+black
+pylint
+flake8
+mypy
+pre-commit
